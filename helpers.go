@@ -22,7 +22,7 @@ func NewConn(host string, t Transport) *Conn {
 	if strings.Index(host, "http://") < 0 && strings.Index(host, "https://") < 0 {
 		host = "http://" + host
 	}
-	host = strings.TrimRight(host, "/") + "/"
+	host = strings.TrimRight(host, "/")
 
 	return &Conn{
 		Host:      host,
